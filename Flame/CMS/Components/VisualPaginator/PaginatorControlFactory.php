@@ -9,7 +9,7 @@ namespace Flame\CMS\Components\VisualPaginator;
 
 use Nette\Object;
 
-class PaginatorFactory extends Object implements IPaginatorControlFactory
+class PaginatorControlFactory extends Object implements IPaginatorControlFactory
 {
 
 	/**
