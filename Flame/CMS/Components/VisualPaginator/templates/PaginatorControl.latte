@@ -8,16 +8,18 @@
 	<div class="pagination">
 		<ul>
 			{if $paginator->isFirst()}
-				<li><a>«</a></li>
+				<li class="first"><a>«</a></li>
 			{else}
-				<li><a href="{link this, 'page' => $paginator->page - 1}">«</a></li>
+				<li class="first"><a href="{link this, 'page' => $paginator->page - 1}">«</a></li>
 			{/if}
 
 			{foreach $steps as $step}
 				{if $step == $paginator->page}
 					<li class="active"><a>{$step}</a></li>
 				{else}
-					<li><a href="{link this, 'page' => $step}">{$step}</a></li>
+					<li {if $step == ($paginator->page - 1)}class="previous"{/if} {if $step == ($paginator->page + 1)}class="further"{/if}>
+						<a href="{link this, 'page' => $step}">{$step}</a>
+					</li>
 				{/if}
 				{if $iterator->nextValue > $step + 1}
 					<li class="disabled"><a>…</a></li>
@@ -25,9 +27,9 @@
 			{/foreach}
 
 			{if $paginator->isLast()}
-				<li><a>»</a></li>
+				<li class="last"><a>»</a></li>
 			{else}
-				<li><a href="{link this, 'page' => $paginator->page + 1}">»</a></li>
+				<li class="last"><a href="{link this, 'page' => $paginator->page + 1}">»</a></li>
 			{/if}
 		</ul>
 	</div>
