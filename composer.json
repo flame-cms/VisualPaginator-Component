@@ -1,0 +1,36 @@
+{
+  "name": "flame-cms/visualpaginator",
+  "type": "library",
+  "description": "Visual paginator control for Nette ",
+  "keywords": ["framework", "nette", "simple", "flame", "control", "paginator", "components", "visual paginator"],
+  "homepage": "https://github.com/flame-cms/VisualPaginator-Component",
+  "license": "BSD-2-Clause-FreeBSD",
+
+  "authors": [
+    {
+      "name": "Jiří Šifalda",
+      "homepage": "http://jsifalda.name/"
+    }
+  ],
+
+  "support": {
+    "email": "flame@jsifalda.name",
+    "issues": "https://github.com/flame-cms/VisualPaginator-Component/issues"
+  },
+
+  "require": {
+    "php": ">=5.3.2",
+    "nette/nette": ">=2.0.1"
+  },
+
+
+  "config": {
+    "vendor-dir": "libs"
+  },
+
+  "autoload": {
+    "psr-0": {
+      "Flame": ""
+    }
+  }
+}
